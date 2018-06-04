@@ -35,3 +35,22 @@ Welcome to Angular
 3. Create Component
 
     ng g c componentName
+
+
+4. Binding
+
+    Style Binding & NgStyle
+    -----------------------
+        https://alligator.io/angular/style-binding-ngstyle-angular/
+
+    Class Binding & NgClass
+    -----------------------
+        https://alligator.io/angular/class-binding-ngclass-angular/
+
+    Data Binding
+    ------------
+        https://alligator.io/angular/data-binding-angular/
+
+    Property Binding
+    ----------------
+        https://alligator.io/angular/innerhtml-binding-angular/
