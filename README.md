@@ -54,3 +54,15 @@ Welcome to Angular
     Property Binding
     ----------------
         https://alligator.io/angular/innerhtml-binding-angular/
+
+
+
+5. Two way binding
+
+    import { FormsModule } from '@angular/forms';
+
+     <input type="text" [(ngModel)]="title" class="form-control">
+
+
+     title:any = "Anular Two way binding"
+

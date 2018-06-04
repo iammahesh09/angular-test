@@ -1,35 +1,3 @@
 <h1 class="text-center display-1">Hello ! {{title}}</h1>
 
-<!-- Style Binding a single style value-->
-<p [style.background-color]="'darkorchid'">Quite something!</p>
-
-<p [style.font-size.em]="'3'"> A paragraph at 3em! </p>
-
-<p [style.font-size.px]="isImportant ? '30' : '16'"> Some text that may be important. </p>
-
-<!-- NgStyle for multiple values -->
-
-<p [ngStyle]="myStyles"> You say tomato, I say tomato </p>
-
-
-<p [ngStyle]="{'background-color': 'lime', 'font-size': '20px', 'font-weight': 'bold'}"> You say tomato, I say tomato</p>
-
-<p [ngStyle]="setMyStyles()">You say tomato, I say tomato</p>
-
-
-
-<!-- Class -->
-
-<div [class.active]="isActive"> this package provides snippets </div>
-<div [ngClass]="myClasses">This package provides snippets and completions for Angular</div>
-
-<div [ngClass]="setMyClasses()">This package provides snippets and completions for Angular</div>
-
-<p [class]="['text-primary']">This package provides snippets and completions for Angular.</p>
-
-<p [ngClass]="['text-white','bg-success']">This package provides snippets and completions for Angular</p>
-
-
-
-
-<div [innerHTML]="htmlStr"></div>
+ <input type="text" [(ngModel)]="title" class="form-control">
