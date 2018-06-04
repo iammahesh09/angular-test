@@ -30,3 +30,8 @@ Welcome to Angular
         "../node_modules/bootstrap/dist/js/bootstrap.min.js"
     ],
 
+
+
+3. Create Component
+
+    ng g c componentName
