@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   title: string = 'Angular';
-
+  show:boolean = true;
+  
   constructor() { }
+
+  toggle(){
+    this.show = !this.show;
+  }
 
 
 }

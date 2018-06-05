@@ -66,3 +66,7 @@ Welcome to Angular
 
      title:any = "Anular Two way binding"
 
+6. ngIf
+
+    https://alligator.io/angular/ngif-new-features-angular4/
+
