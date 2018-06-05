@@ -85,3 +85,13 @@ Welcome to Angular
 9. Moments Date Formats
 
     https://momentjs.com/
+
+
+10. Create Custom Module
+
+    https://alligator.io/angular/anatomy-angular-module/
+
+
+11. Create Provider (Services)
+
+    https://alligator.io/angular/dependency-injection-angular/
