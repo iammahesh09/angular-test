@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import * as moment from 'moment';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 export class HomeComponent {
 
   title: string = 'Angular';
-  show:boolean = true;
   
   constructor() { }
 
-  toggle(){
-    this.show = !this.show;
-  }
+  lastUpadte= new Date()
 
+  getRelativeTime(date){
+    return moment(date).fromNow();
+   }
 
 }

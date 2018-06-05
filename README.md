@@ -80,3 +80,8 @@ Welcome to Angular
     // pipes: lowercase, uppercase, tiltecase, currency, date, json, async
 
     https://alligator.io/angular/built-in-pipes-angular/
+
+
+9. Moments Date Formats
+
+    https://momentjs.com/
