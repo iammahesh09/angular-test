@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { ProductComponent } from './products/product-list/product/product.component';
 import { UsersComponent } from './users/users.component';
-import { UserService } from './shared/userServices';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -21,6 +21,7 @@ import { UserService } from './shared/userServices';
     ProductListComponent,
     ProductComponent,
     UsersComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,7 @@ import { UserService } from './shared/userServices';
     HttpClientModule,
     SharedModule
   ],
-  providers: [UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

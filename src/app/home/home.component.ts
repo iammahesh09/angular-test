@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ConsoleLogger } from '../shared/console.logger';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +10,9 @@ export class HomeComponent {
 
   title: string = 'Angular';
   
-  constructor() { }
+  constructor(logger:ConsoleLogger) { 
+    logger.warn("Component took lot of time to load");
+  }
 
-  lastUpadte= new Date()
 
 }
