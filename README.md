@@ -70,3 +70,8 @@ Welcome to Angular
 
     https://alligator.io/angular/ngif-new-features-angular4/
 
+
+7. ngFor
+
+    https://alligator.io/angular/ngfor-directive/
+
