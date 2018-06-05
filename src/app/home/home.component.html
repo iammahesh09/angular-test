@@ -1,6 +1,6 @@
 <h1 class="text-center display-1" *ngIf="title">Hello ! {{title}}</h1>
 
 <p>Time {{lastUpadte | date }}</p>
-<p>Moments Format : {{getRelativeTime(lastUpadte)}}</p>
+<!-- <p>Moments Format : {{getRelativeTime(lastUpadte)}}</p> -->
+<p>Moments Format : {{getRelativeTime | relativeTime }}</p>
 <app-product-list></app-product-list>
-
