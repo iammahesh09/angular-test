@@ -11,7 +11,8 @@ const appRoutes: Routes = [
     { path: 'About', component: AboutComponent },
     { path: 'Users', component: UsersComponent },
     { path: 'Products', component: ProductComponent },
-    { path: '**', component: PageNotFoundComponent }
+    //{ path: '**', component: PageNotFoundComponent }
+    { path: '**', redirectTo: '/' }
 ]
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
