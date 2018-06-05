@@ -11,7 +11,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let user of users; let odd= odd" [class]="odd?['bg-success']:['bg-primary']">
+      <tr *ngFor="let user of users | async; let odd= odd" [class]="odd?['bg-success']:['bg-primary']">
         <td>{{user.id | number}}</td>
         <td>{{user.name | uppercase}}</td>
         <td>{{user.email}}</td>

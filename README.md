@@ -75,3 +75,8 @@ Welcome to Angular
 
     https://alligator.io/angular/ngfor-directive/
 
+8. Pipes
+
+    // pipes: lowercase, uppercase, tiltecase, currency, date, json, async
+
+    https://alligator.io/angular/built-in-pipes-angular/
