@@ -98,4 +98,11 @@ Welcome to Angular
 
 
 12. More Providers
+    https://alligator.io/angular/providers-angular/
+    
+    https://alligator.io/angular/providers-shared-modules/
+
+13. Routing
+
+    https://alligator.io/angular/introduction-routing-angular/
     

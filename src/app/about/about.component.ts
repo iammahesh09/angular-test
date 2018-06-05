@@ -8,9 +8,7 @@ import { ConsoleLogger } from '../shared/console.logger';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(logger:ConsoleLogger) {
-    logger.log("Inside home component");
-   }
+  constructor() {}
 
   ngOnInit() {
   }

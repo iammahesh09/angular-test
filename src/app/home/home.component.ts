@@ -10,9 +10,7 @@ export class HomeComponent {
 
   title: string = 'Angular';
   
-  constructor(logger:ConsoleLogger) { 
-    logger.warn("Component took lot of time to load");
-  }
+  constructor() {}
 
 
 }

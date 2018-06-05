@@ -10,7 +10,7 @@ import { UserService } from '../shared/userServices';
 export class UsersComponent implements OnInit {
 
   users:any;
-  isErorr:boolean=true;
+  isErorr:boolean;
   
   constructor(_userService:UserService) {
       _userService.getUserData().subscribe(
