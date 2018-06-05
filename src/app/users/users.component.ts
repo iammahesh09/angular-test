@@ -8,11 +8,15 @@ import { UserService } from '../shared/userServices';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
+
   users:any;
+  isErorr:boolean=true;
+  
   constructor(_userService:UserService) {
       _userService.getUserData().subscribe(
         rep => this.users= rep,
-        error => console.log("connection cannot be established")
+        error =>this.isErorr = error
+        //error => console.log("connection cannot be established")
       )
    }
 
