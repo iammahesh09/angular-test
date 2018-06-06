@@ -22,8 +22,7 @@ const appRoutes: Routes = [
     { path: 'Users/:login', component: UserDetailsComponent, children:childRoutes },
     { path: 'ProductsList', component: ProductListComponent },
     //{ path: '**', component: PageNotFoundComponent },
-    { path: '**',redirectTo:'/'},
-
+    { path: '**',redirectTo:'/'}
 ]
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
