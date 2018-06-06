@@ -1,0 +1,9 @@
+<div *ngIf="page_error" class="alert alert-danger">not get page details</div>
+
+<div class="card">
+    <div class="card-body">
+        <img [src]="userdetails?.avatar_url" alt="" class="img-fluid">
+        <h2>{{userdetails?.name}}</h2>
+        <p>{{userdetails?.location}}</p>
+    </div>
+</div>

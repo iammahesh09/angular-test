@@ -13,4 +13,8 @@ export class UserService{
        return this._http.get('https://api.github.com/users')
     }
 
+    getUserDetilsData(login:any){
+        return this._http.get('https://api.github.com/users/'+login)
+     }
+
 }

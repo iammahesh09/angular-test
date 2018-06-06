@@ -4,7 +4,7 @@
     <div class="card">
       <div class="card-body">
         <img [src]="user.avatar_url" alt="{{user.login}}" class="img-fluid">
-        <h1 class="text-center">{{user.login | uppercase}}</h1>
+        <h1 class="text-center"><a [routerLink]="'/Users/'+user.login">{{user.login | uppercase}}</a></h1>
       </div>
       <div class="card-footer">
         {{user.type}}
