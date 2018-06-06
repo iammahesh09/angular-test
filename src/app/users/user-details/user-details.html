@@ -6,4 +6,9 @@
         <h2>{{userdetails?.name}}</h2>
         <p>{{userdetails?.location}}</p>
     </div>
+    <div class="card-footer">
+        <a class="btn btn-link" routerLink="user-review" >Review</a>
+        <a class="btn btn-link" routerLink="user-comment">Comment</a>
+    </div>
+    <router-outlet></router-outlet>
 </div>

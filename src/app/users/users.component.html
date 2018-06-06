@@ -4,9 +4,9 @@
     <div class="card">
       <div class="card-body">
         <img [src]="user.avatar_url" alt="{{user.login}}" class="img-fluid">
-        <h1 class="text-center"><a [routerLink]="'/Users/'+user.login">{{user.login | uppercase}}</a></h1>
+        <h4 class="text-center"><a [routerLink]="'/Users/'+user.login">{{user.login | uppercase}}</a></h4>
       </div>
-      <div class="card-footer">
+      <div class="card-footer" [style.background]="user.type?'#28a745bd':'#007bff80'">
         {{user.type}}
       </div>
     </div>
