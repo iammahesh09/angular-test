@@ -32,16 +32,3 @@ const appRoutes: Routes = [
 })
 
 export class AppRoutingModule { }
-
-export const AppRoutingCompnent = [
-    HomeComponent,
-    AboutComponent,
-    UsersComponent,
-    ProductListComponent,
-    UserDetailsComponent,
-    UserReviewComponent,
-    UserCommentComponent,
-    LazyComponent,
-    PageNotFoundComponent
-]
-

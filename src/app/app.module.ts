@@ -7,16 +7,35 @@ import { RouterModule }   from '@angular/router';
 
 //Custom Module
 import { SharedModule } from './shared/SharedModule';
-
+import { HomeComponent } from './home/home.component';
+import { UsersComponent } from './users/users.component';
+import { AboutComponent } from './about/about.component';
 import { AppComponent } from './app.component';
-import { AppRoutingModule, AppRoutingCompnent } from './AppRouting';
+import { AppRoutingModule } from './AppRouting';
+import { PageNotFoundComponent } from './page-not-found';
+import { LazyComponent } from './lazy.component';
+import { UserCommentComponent } from './users/user-details/comments/user.comment.component';
+import { UserReviewComponent } from './users/user-details/reviews/review.component';
+import { UserDetailsComponent } from './users/user-details/user.details.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+
+
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppRoutingCompnent
+    HomeComponent,
+    AboutComponent,
+    UsersComponent,
+    ProductListComponent,
+    UserDetailsComponent,
+    UserReviewComponent,
+    UserCommentComponent,
+    LazyComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +44,7 @@ import { AppRoutingModule, AppRoutingCompnent } from './AppRouting';
     RouterModule,
     SharedModule,
     AppRoutingModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
