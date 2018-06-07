@@ -1,1 +1,5 @@
-<p>Product Page work</p>
+<h3 class="display-4 text-center">Show Products</h3>
+<hr/>
+<div class="row">
+  <app-product class="col-sm-4" [getProduct]="item" *ngFor="let item of products"></app-product>
+</div>

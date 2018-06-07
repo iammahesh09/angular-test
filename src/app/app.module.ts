@@ -18,9 +18,12 @@ import { UserCommentComponent } from './users/user-details/comments/user.comment
 import { UserReviewComponent } from './users/user-details/reviews/review.component';
 import { UserDetailsComponent } from './users/user-details/user.details.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductComponent } from './products/product-list/product/product.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReativeFormComponent } from './forms/reative-form/reative.component';
 import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
+import { LoginComponent } from './login/login.component';
+import { productServices } from './shared/productServices';
 
 
 
@@ -34,6 +37,7 @@ import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
     AboutComponent,
     UsersComponent,
     ProductListComponent,
+    ProductComponent,
     UserDetailsComponent,
     UserReviewComponent,
     UserCommentComponent,
@@ -41,7 +45,8 @@ import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
     PageNotFoundComponent,
     FormsComponent,
     ReativeFormComponent,
-    AnglarFormComponent
+    AnglarFormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,7 @@ import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [productServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

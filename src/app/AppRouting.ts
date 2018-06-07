@@ -12,6 +12,7 @@ import { LazyComponent } from './lazy.component';
 import { FormsComponent } from './forms/forms.component';
 import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
 import { ReativeFormComponent } from './forms/reative-form/reative.component';
+import { LoginComponent } from './login/login.component';
 
 const childRoutes: Routes = [
     { path: 'user-review', component: UserReviewComponent },
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
     { path: 'ProductsList', component: ProductListComponent },
     { path: 'lazy', component: LazyComponent, loadChildren: './lazy.module#LazyModule' },
     { path: 'forms', component: FormsComponent, children:childForm },
+    {path:'login',component:LoginComponent},
     { path: '**', component: PageNotFoundComponent },
     //{ path: '**', redirectTo: '/' }
 ]
