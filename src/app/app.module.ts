@@ -18,6 +18,7 @@ import { UserCommentComponent } from './users/user-details/comments/user.comment
 import { UserReviewComponent } from './users/user-details/reviews/review.component';
 import { UserDetailsComponent } from './users/user-details/user.details.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 
@@ -35,7 +36,8 @@ import { ProductListComponent } from './products/product-list/product-list.compo
     UserReviewComponent,
     UserCommentComponent,
     LazyComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
