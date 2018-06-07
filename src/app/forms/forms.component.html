@@ -1,5 +1,47 @@
 <h2 class="text-center dispaly-2 text-primary text-uppercase">Product Form</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Valid</th>
+        <th>Invalid</th>
+        <th>Dirty</th>
+        <th>Pristine</th>
+        <th>Touched</th>
+        <th>Erorr</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Brand</td>
+        <td>{{brand.valid}}</td>
+        <td>{{brand.invalid}}</td>
+        <td>{{brand.dirty}}</td>
+        <td>{{brand.pristine}}</td>
+        <td>{{brand.touched}}</td>
+        <td>{{brand.errors | json}}</td>
+      </tr>
+      <tr>
+          <td>Model</td>
+          <td>{{model.valid}}</td>
+          <td>{{model.invalid}}</td>
+          <td>{{model.dirty}}</td>
+          <td>{{model.pristine}}</td>
+          <td>{{model.touched}}</td>
+          <td>{{model.errors | json}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{price.valid}}</td>
+            <td>{{price.invalid}}</td>
+            <td>{{price.dirty}}</td>
+            <td>{{price.pristine}}</td>
+            <td>{{price.touched}}</td>
+            <td>{{price.errors | json}}</td>
+        </tr>
 
+    </tbody>
+  </table>
 <div class="col-sm-10 col-lg-6 offset-sm-1 offset-lg-3">
   <div class="card">
     <form novalidate #productForm="ngForm">
