@@ -7,13 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class FormsComponent implements OnInit {
-  product: any = {};
 
   constructor() { }
 
-  sendProductNewData(){
-    console.log(this.product)
-  }
 
   ngOnInit() {
   }

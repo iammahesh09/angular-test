@@ -1,9 +1,9 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule }   from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 //Custom Module
 import { SharedModule } from './shared/SharedModule';
@@ -19,6 +19,8 @@ import { UserReviewComponent } from './users/user-details/reviews/review.compone
 import { UserDetailsComponent } from './users/user-details/user.details.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { FormsComponent } from './forms/forms.component';
+import { ReativeFormComponent } from './forms/reative-form/reative.component';
+import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
 
 
 
@@ -37,16 +39,19 @@ import { FormsComponent } from './forms/forms.component';
     UserCommentComponent,
     LazyComponent,
     PageNotFoundComponent,
-    FormsComponent
+    FormsComponent,
+    ReativeFormComponent,
+    AnglarFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
     SharedModule,
     AppRoutingModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

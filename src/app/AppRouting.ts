@@ -1,6 +1,5 @@
-
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UsersComponent } from './users/users.component';
@@ -11,10 +10,17 @@ import { UserDetailsComponent } from './users/user-details/user.details.componen
 import { UserCommentComponent } from './users/user-details/comments/user.comment.component';
 import { LazyComponent } from './lazy.component';
 import { FormsComponent } from './forms/forms.component';
+import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
+import { ReativeFormComponent } from './forms/reative-form/reative.component';
 
 const childRoutes: Routes = [
     { path: 'user-review', component: UserReviewComponent },
     { path: 'user-comment', component: UserCommentComponent }
+]
+
+const childForm:Routes = [
+    {path:'angularForm', component:AnglarFormComponent},
+    {path:'reativeForm', component:ReativeFormComponent}
 ]
 
 const appRoutes: Routes = [
@@ -23,10 +29,10 @@ const appRoutes: Routes = [
     { path: 'Users', component: UsersComponent },
     { path: 'Users/:login', component: UserDetailsComponent, children: childRoutes },
     { path: 'ProductsList', component: ProductListComponent },
-    { path: 'lazy', component: LazyComponent, loadChildren:'./lazy.module#LazyModule' },
-    {path:'forms', component:FormsComponent},
-    //{ path: '**', component: PageNotFoundComponent },
-    { path: '**', redirectTo: '/' }
+    { path: 'lazy', component: LazyComponent, loadChildren: './lazy.module#LazyModule' },
+    { path: 'forms', component: FormsComponent, children:childForm },
+    { path: '**', component: PageNotFoundComponent },
+    //{ path: '**', redirectTo: '/' }
 ]
 @NgModule({
     imports: [RouterModule.forRoot(appRoutes)],
