@@ -25,6 +25,10 @@ export class LoginService {
        return !! localStorage.getItem("token");
     }
 
+    logout(){
+        return localStorage.clear()
+    }
+
 
 
 }

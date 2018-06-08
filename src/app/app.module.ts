@@ -47,7 +47,7 @@ import { LoginService } from './shared/login.service';
     FormsComponent,
     ReativeFormComponent,
     AnglarFormComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
