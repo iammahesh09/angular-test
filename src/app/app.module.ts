@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
-//Custom Module
+// Custom Module
 import { SharedModule } from './shared/SharedModule';
 import { HomeComponent } from './home/home.component';
 import { UsersComponent } from './users/users.component';
@@ -24,6 +24,7 @@ import { ReativeFormComponent } from './forms/reative-form/reative.component';
 import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
 import { LoginComponent } from './login/login.component';
 import { productServices } from './shared/productServices';
+import { LoginService } from './shared/login.service';
 
 
 
@@ -58,7 +59,7 @@ import { productServices } from './shared/productServices';
     AppRoutingModule
 
   ],
-  providers: [productServices],
+  providers: [productServices, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
