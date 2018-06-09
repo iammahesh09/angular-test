@@ -10,7 +10,9 @@ export class HomeComponent {
 
   title: string = 'Angular';
   
-  constructor() {}
+  constructor(logger:ConsoleLogger) {
+    logger.log("Hello! Console logger")
+  }
 
 
 }

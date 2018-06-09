@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsoleLogger } from '../shared/console.logger';
+import { FileLogger } from '../shared/file.logger';
 
 @Component({
   selector: 'app-about',
@@ -8,7 +9,9 @@ import { ConsoleLogger } from '../shared/console.logger';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() {}
+  constructor(fileloger:FileLogger) {
+    fileloger.log("Hello File World")
+  }
 
   ngOnInit() {
   }
