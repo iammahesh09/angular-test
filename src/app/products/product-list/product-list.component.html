@@ -1,4 +1,5 @@
 <h3 class="display-4 text-center">Show Products</h3>
+<a routerLink="/NewProduct">Add New Product</a>
 <hr/>
 <div class="row">
   <app-product class="col-sm-4" [getProduct]="item" *ngFor="let item of products"></app-product>

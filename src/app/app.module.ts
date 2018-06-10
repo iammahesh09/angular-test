@@ -25,6 +25,7 @@ import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
 import { LoginComponent } from './login/login.component';
 import { productServices } from './shared/productServices';
 import { LoginService } from './shared/login.service';
+import { NewProductComponent } from './products/new-product/new-product.component';
 
 
 
@@ -47,7 +48,8 @@ import { LoginService } from './shared/login.service';
     FormsComponent,
     ReativeFormComponent,
     AnglarFormComponent,
-    LoginComponent
+    LoginComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,

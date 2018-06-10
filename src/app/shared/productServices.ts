@@ -5,12 +5,18 @@ import { HttpClient } from '@angular/common/http';
 
 export class productServices {
 
-    products: any
-
     constructor(private _http: HttpClient) { }
-
+    private productUrl = ""
     getProductsData() {
-        return this._http.get('https://exp-rest-api.herokuapp.com/api/products/')
+        return this._http.get('https://exp-rest-api.herokuapp.com/api/products')
+    }
+
+    getProductDetails(id){
+        return this._http.get('https://exp-rest-api.herokuapp.com/api/products/' + id)
+    }
+
+    saveProduct(product){
+        return this._http.post('https://exp-rest-api.herokuapp.com/api/products', product)
     }
 
 }
