@@ -1,0 +1,4 @@
+
+input.ng-invalid{border-left: 3px solid rgb(255, 0, 0);}
+
+input.ng-valid{border-left: 3px solid rgb(0, 151, 0);}
