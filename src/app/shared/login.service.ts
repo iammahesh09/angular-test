@@ -24,6 +24,10 @@ export class LoginService {
     isLoggedin(): boolean {
        return !! localStorage.getItem("token");
     }
+    // Option In isLogin
+    // isLoggedin(): boolean {
+    //     return localStorage.getItem("token") ? true:false;
+    // }
 
     logout(){
         return localStorage.clear()
