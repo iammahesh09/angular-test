@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from '@angular/common/http';
+import { Subject } from "rxjs";
 
 @Injectable()
 
@@ -12,6 +13,7 @@ export class LoginService {
     }
 
     saveToken(token: string){
+        this.isAuthenticated.next(true);
         return localStorage.setItem("token", token)
     }
 
@@ -30,8 +32,11 @@ export class LoginService {
     // }
 
     logout(){
-        return localStorage.clear()
+        localStorage.removeItem("token");
+        this.isAuthenticated.next(false);
     }
+
+    isAuthenticated: Subject<boolean> = new Subject();
 
 
 

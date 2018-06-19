@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from './shared/login.service';
 
@@ -7,7 +7,7 @@ import { LoginService } from './shared/login.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'Angular';
 
@@ -23,6 +23,10 @@ export class AppComponent {
   onLogout() {
     this._loginService.logout();
     this._router.navigate(["login"]);
+  }
+
+  ngOnInit(){
+    this._loginService.isAuthenticated.subscribe(res => this.isLoggedin = res);
   }
 
 }
