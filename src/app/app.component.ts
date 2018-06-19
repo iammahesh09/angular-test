@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor(private _loginService: LoginService, private _router: Router) {
 
-    this.isLoggedin = _loginService.isLoggedin();
+    this.isLoggedin = this._loginService.isLoggedin();
 
   }
 

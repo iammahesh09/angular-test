@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { productServices } from '../../shared/productServices';
 
@@ -10,16 +11,15 @@ import { productServices } from '../../shared/productServices';
 
 export class NewProductComponent {
 
-    product: any=[]
+    product: any={brand:""}
     isSuccess: boolean;
     isError: boolean;
 
-    constructor(private _productService: productServices) { }
+    constructor(private _productService: productServices, private _router:Router) { }
 
     addProduct() {
 
-
-        console.log(this.product)
+        console.log(this.product);
 
         this._productService.saveProduct(this.product).subscribe(
             res => {
@@ -27,7 +27,7 @@ export class NewProductComponent {
                 this.product = {},
                 this.isSuccess= true,
                 this.isError =false
-
+                this._router.navigate(['/ProductsList'])
             },
             err =>{
                 console.log(err),
@@ -35,10 +35,8 @@ export class NewProductComponent {
                 this.isError =true,
                 this.isSuccess= false
             }
-        )
 
-
-
+       )
 
     }
 

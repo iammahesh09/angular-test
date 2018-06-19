@@ -1,4 +1,4 @@
-<div class="card" [ngStyle]="getProduct.isStack?brSuc:brRed">
+<div class="card" [ngStyle]="getProduct.inStock?brSuc:brRed">
     <div class="card-header">
       <h4>{{getProduct.brand|uppercase}}
         <small>{{getProduct.model}}</small>
@@ -10,9 +10,8 @@
       <br/>
   
     </div>
-    <div class="card-footer" [ngClass]="getProduct.isStack?success:danger">
-      Exclude Out of Stock
-      <input type="checkbox" [checked]="getProduct.isStack" [disabled]="true">
+    <div class="card-footer" [ngClass]="getProduct.inStock?success:danger">
+      <span *ngIf="!getProduct.inStock">Exclude Out of Stock</span>
+      <span *ngIf="getProduct.inStock">Is Stock</span>
     </div>
   </div>
-  

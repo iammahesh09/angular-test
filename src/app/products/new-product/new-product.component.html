@@ -10,8 +10,8 @@
       <label class="col-sm-2 col-form-label">Brand</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" minlength="2" placeholder="Brand"  name="brand" [(ngModel)]="product.brand" #brand="ngModel" required>
-        <span class="text-danger" *ngIf="brand.dirty && brand.errors?.required">Required</span>
-        <span class="text-danger" *ngIf="brand.dirty && brand.errors?.minlength">Min 2 Char</span>
+        <span class="text-danger" *ngIf="brand.dirty && brand?.errors?.required">Required</span>
+        <span class="text-danger" *ngIf="brand.dirty && brand?.errors?.minlength">Min 2 Char</span>
       </div>
     </div>
 
@@ -19,7 +19,7 @@
       <label class="col-sm-2 col-form-label">Model</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" placeholder="Model" [(ngModel)]="product.model" name="model" #model="ngModel" required>
-        <span class="text-danger" *ngIf="model.dirty && model.errors?.required">Required</span>
+        <span class="text-danger" *ngIf="model.dirty && model?.errors?.required">Required</span>
       </div>
     </div>
 
@@ -27,26 +27,38 @@
       <label class="col-sm-2 col-form-label">Price</label>
       <div class="col-sm-10">
         <input type="text" class="form-control" placeholder="Price" pattern="[0-9]{3,6}" [(ngModel)]="product.price" name="price" #price="ngModel" required>
-        <span class="text-danger" *ngIf="price.dirty && price.errors?.required">Required</span>
-        <span class="text-danger" *ngIf="price.dirty && price.errors?.pattern">invalid Price</span>
+        <span class="text-danger" *ngIf="price.dirty && price?.errors?.required">Required</span>
+        <span class="text-danger" *ngIf="price.dirty && price?.errors?.pattern">invalid Price</span>
       </div>
     </div>
 
-    <div class="form-group row">
-      <div class="col-sm-2">IsStack</div>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" [(ngModel)]="product.isStack" name="isStack" #isStack="ngModel" required>
-          <span class="text-danger" *ngIf="isStack.dirty && isStack.errors?.required">Required</span>
-          <label class="form-check-label"></label>
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-sm-2 pt-0">inStock</legend>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="product.inStock" name="inStock" value="true" checked>
+            <label class="form-check-label" for="gridRadios1">
+              True
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" [(ngModel)]="product.inStock" name="inStock" value="false">
+            <label class="form-check-label" for="gridRadios2">
+              False
+            </label>
+          </div>
         </div>
       </div>
-    </div>
+    </fieldset>
 
     <div class="form-group row">
       <div class="col-sm-10">
         <button type="submit" (click)="addProduct()" [disabled]="newProduct.invalid" class="btn btn-primary">Add Product</button>
+        <button type="button" class="btn btn-info" routerLink="/ProductsList">Goto Product List</button>
       </div>
     </div>
   </form>
 </div>
+
+

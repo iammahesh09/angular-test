@@ -2,3 +2,11 @@
 .red {
   color: brown;
 }
+.card{margin-bottom: 10px;}
+.success{
+  background-color: rgb(0, 180, 0);
+}
+
+.danger{
+  background-color: rgb(230, 46, 33);
+}

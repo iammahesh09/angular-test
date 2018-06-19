@@ -1,23 +1,6 @@
 <h3 class="display-4 text-center">Show Products</h3>
-<!-- <a routerLink="/NewProduct" class="btn btn-link">Add New Product</a> -->
+<a routerLink="/NewProduct" class="btn btn-warning">Add New Product</a>
 <hr/>
 <div class="row">
-  <!-- <app-product class="col-sm-4" [getProduct]="item" *ngFor="let item of products"></app-product> -->
-  <div class="card" *ngFor="let getProduct of products">
-      <div class="card-header">
-        <h4>{{getProduct.brand|uppercase}}
-          <small>{{getProduct.model}}</small>
-        </h4>
-      </div>
-      <div class="card-body">
-  
-        <p>Price :<strong>{{getProduct.price | currency}}</strong></p>
-        <br/>
-    
-      </div>
-      <div class="card-footer" [ngClass]="getProduct.isStack">
-        Exclude Out of Stock
-        <input type="checkbox" [checked]="getProduct.isStack" [disabled]="true">
-      </div>
-    </div>
+  <app-product class="col-sm-4" [getProduct]="item" *ngFor="let item of products"></app-product>
 </div>
