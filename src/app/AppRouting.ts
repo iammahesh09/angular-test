@@ -14,7 +14,6 @@ import { AnglarFormComponent } from './forms/anglar-form/anglar-form.component';
 import { ReativeFormComponent } from './forms/reative-form/reative.component';
 import { LoginComponent } from './login/login.component';
 import { NewProductComponent } from './products/new-product/new-product.component';
-import { UpdateProductComponent } from './products/update-product/update-product.component';
 
 const childRoutes: Routes = [
     { path: 'user-review', component: UserReviewComponent },
@@ -32,7 +31,6 @@ const appRoutes: Routes = [
     { path: 'Users', component: UsersComponent },
     { path: 'Users/:login', component: UserDetailsComponent, children: childRoutes },
     { path: 'ProductsList', component: ProductListComponent },
-    { path: 'update-product', component: UpdateProductComponent },
     { path: 'NewProduct', component: NewProductComponent },
     { path: 'lazy', component: LazyComponent, loadChildren: './lazy.module#LazyModule' },
     { path: 'forms', component: FormsComponent, children:childForm },
